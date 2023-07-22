@@ -10,7 +10,7 @@
     <br/>
   </p>
   <p align="center">
-    <a href="">
+    <a href="https://dzalhaqi.github.io/api-docs-basic-booking-resevation-information-system/">
       View API docs
     </a>
   </p>
@@ -31,7 +31,7 @@
 - [Table Of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
   - [Description](#description)
-  - [Preview API Docs](#preview-api-docs)
+  - [Preview API Docs (using Redocly)](#preview-api-docs-using-redocly)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
