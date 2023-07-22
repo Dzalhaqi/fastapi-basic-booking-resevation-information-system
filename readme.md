@@ -9,6 +9,11 @@
     Learn Basic FastAPI by Building Simple Booking Reservation Information System Prototype
     <br/>
   </p>
+  <p align="center">
+    <a href="">
+      View API docs
+    </a>
+  </p>
 </p>
 
 <p align="center">
@@ -37,10 +42,11 @@
 ## About The Project
 
 ### Description
-This is Final Project at Data Mining subject. The goals of this project is to mining insight of the sanitation water data around the world through analytical and interactive dashboard
+This project is build aims to improving my skill and knowledge about microservice with python using FastAPI library. This intelligent tourist system prototype is developed with the purpose of offering comprehensive booking information and reservations for various tourist spots. The system is capable of providing users with detailed tourist spot information, along with location grids. Moreover, it enables users to leave comments and ratings for the tours they experience. To ensure smooth operation, the prototype includes an administrator account with privileges to add and remove tour details, manage users, and provide listings. **However, it's important to note that the current version of the application does not utilize any database management system; instead, all data is temporarily stored in Python collections**.
 
-### Preview API Docs
+### Preview API Docs (using Redocly)
 
+![image](https://github.com/Dzalhaqi/fastapi-basic-booking-resevation-information-system/assets/52716202/a96dd3d8-76f1-4af1-9e8d-2667eabe82ab)
 
 
 ## Built With
