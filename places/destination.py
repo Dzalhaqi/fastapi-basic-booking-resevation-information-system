@@ -97,7 +97,7 @@ class TourPreference(str, Enum):
     solo = "solo"
 
 
-@router.get("/ch02/destinations/list/all")
+@router.get("/destinations/list/all")
 def list_tour_destinations():
     tours_json = jsonable_encoder(tours)
     resp_headers = {
@@ -107,13 +107,13 @@ def list_tour_destinations():
     return JSONResponse(content=tours_json, headers=resp_headers)
 
 
-@router.get("/ch02/destinations/details/{id}")
+@router.get("/destinations/details/{id}")
 def check_tour_profile(id: UUID):
     tour_info_json = jsonable_encoder(tours[id])
     return JSONResponse(content=tour_info_json)
 
 
-@router.get("/ch02/destinations/amenities/tour/{id}")
+@router.get("/destinations/amenities/tour/{id}")
 def show_amenities(id: UUID):
     if tours[id].amenities != None:
         amenities = tours[id].amenities
@@ -123,7 +123,7 @@ def show_amenities(id: UUID):
         return {"message": "no amenities"}
 
 
-@router.get("/ch02/destinations/mostbooked")
+@router.get("/destinations/mostbooked")
 def check_recommended_tour(resp: Response):
     resp.headers['X-Access-Tours'] = 'TryUs'
     resp.headers['X-Contact-Details'] = '1900888TOLL'

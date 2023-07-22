@@ -21,7 +21,7 @@ app.include_router(destination.router)
 app.include_router(visit.router)
 app.include_router(
     post.router,
-    prefix="/ch02/post"
+    prefix="/post"
 )
 
 @app.middleware("http")
@@ -38,7 +38,7 @@ async def log_transaction_filter(request: Request, call_next):
     response.headers["X-Time-Elapsed"] = str(process_time)
     return response
 
-@app.get("/ch02")
+@app.get("/")
 def index():
     return {"message": "Intelligent Tourist System Prototype!"}
 

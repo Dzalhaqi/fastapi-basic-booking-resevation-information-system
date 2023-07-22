@@ -1,46 +1,51 @@
 <br/>
 <p align="center">
   <a href="https://github.com/dzalhaqi/pa-mlops">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Analysist Dashboard of Export Import Data of Indonesian Commodity Trade</h3>
+  <h3 align="center">
+    FastAPI Project
+  </h3>
 
   <p align="center">
-    Machine Learninf Ops Final Project - Electronic Engineerng Polytechnic Institute of Surabaya
+    Learn Basic FastAPI by Building Simple Booking Reservation Information System Prototype
     <br/>
-    <br/>
-    <a href="https://github.com/dzalhaqi/pa-mlops"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/dzalhaqi/pa-mlops">View Demo</a>
-    .
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/dzalhaqi/pa-mlops/total) ![Contributors](https://img.shields.io/github/contributors/dzalhaqi/pa-mlops?color=dark-green) ![Forks](https://img.shields.io/github/forks/dzalhaqi/pa-mlops?style=social) ![Issues](https://img.shields.io/github/issues/dzalhaqi/pa-mlops) ![License](https://img.shields.io/github/license/dzalhaqi/pa-mlops) 
+<p align="center">
+  <p align="center">
+    <img src="https://img.shields.io/github/downloads/dzalhaqi/fastapi-basic-booking-resevation-information-system/total"/>
+    <img src="https://img.shields.io/github/contributors/dzalhaqi/fastapi-basic-booking-resevation-information-system?color=dark-green"/>
+    <img src="https://img.shields.io/github/forks/dzalhaqi/fastapi-basic-booking-resevation-information-system?style=social"/>
+    <img src="https://img.shields.io/github/issues/dzalhaqi/fastapi-basic-booking-resevation-information-system"/>
+    <img src="https://img.shields.io/github/license/dzalhaqi/fastapi-basic-booking-resevation-information-system"/>
+  </p>
+</p>
 
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
+  - [Description](#description)
+  - [Preview API Docs](#preview-api-docs)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [License](#license)
-- [Authors](#authors)
 - [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+### Description
+This is Final Project at Data Mining subject. The goals of this project is to mining insight of the sanitation water data around the world through analytical and interactive dashboard
 
-This is Final Project at Machine Learning Ops Subject. 
+### Preview API Docs
+
+
 
 ## Built With
 
-Application deployed is build with **python** using **streamlit** library for the dash app and **plotly** library for the chart
+Application deployed is build with **Python** using **FastAPI** library 
 
 ## Getting Started
 
@@ -75,7 +80,7 @@ git --version
 1. Clone the repo
 
 ```sh
-git clone https://github.com/dzalhaqi/pa-mlops.git
+git clone https://github.com/Dzalhaqi/fastapi-basic-booking-resevation-information-system.git
 ```
 
 2. Create python environment
@@ -86,12 +91,12 @@ python -m venv env
 
 3. Activate python environment
 
-for Windows OS
+* for Windows OS
 ```sh
 env\Scripts\activate
 ```
 
-for Unix Based OS (Linux, MacOS, etc)
+* for Unix Based OS (Linux, MacOS, etc)
 ```sh
 source env/bin/activate
 ```
@@ -102,24 +107,16 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-5. Get into web directory and run the app
+5. Run the FastAPI server with uvicorn (default port 8000)
 
 ```sh
-cd web && streamlit run app.py
+uvicorn main:app --reload
 ```
 
 ## License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/dzalhaqi/pa-mlops/blob/main/LICENSE.md) for more information.
 
-## Authors
-
-* **Muhammad Dzalhaqi** - *Applied Data Science Student (EEPIS)* - [Muhammad Dzalhaqi](https://github.com/dzalhaqi/) - *Build dash app*
-* **Much. Toriqul Muchlisin** - *Applied Data Science Student (EEPIS)* - [Much. Toriqul Muchlisin](https://github.com/tmuchlissin) - *Build model*
-* **Rifda Quratul 'Ain** - *Applied Data Science Student (EEPIS)* - [Rifda Quratul 'Ain](https://github.com/riffuda) - *Build analytical report*
-
 ## Acknowledgements
 
 * [Muhammad Dzalhaqi](https://github.com/dzalhaqi/)
-* [Moch. Toriqul Muhclissin](https://github.com/tmuchlissin)
-* [Rifda Quratul 'Ain](https://github.com/riffuda)

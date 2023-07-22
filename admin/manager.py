@@ -12,7 +12,7 @@ from places.destination import Tour, TourBasicInfo, TourInput, TourLocation, tou
 
 router = APIRouter()
 
-@router.post("/ch02/admin/destination/add")
+@router.post("/admin/destination/add")
 def add_tour_destination(input: TourInput):
     try:
         tid = uuid1()
@@ -34,7 +34,7 @@ def add_tour_destination(input: TourInput):
         return JSONResponse(content={"message" : "invalid tour"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@router.delete("/ch02/admin/destination/remove/{id}")
+@router.delete("/admin/destination/remove/{id}")
 def remove_tour_destination(id: UUID):
     try:
         del tours[id]
@@ -45,7 +45,7 @@ def remove_tour_destination(id: UUID):
         return JSONResponse(content={"message" : "tour does not exist"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@router.put("/ch02/admin/destination/update", status_code=status.HTTP_202_ACCEPTED)
+@router.put("/admin/destination/update", status_code=status.HTTP_202_ACCEPTED)
 def update_tour_destination(tour: Tour):
     try:
         tid = tour.id
@@ -59,22 +59,22 @@ def update_tour_destination(tour: Tour):
         return { "message" : "tour does not exist" }
 
 
-@router.get("/ch02/admin/destination/list", status_code=status.HTTP_200_OK)
+@router.get("/admin/destination/list", status_code=status.HTTP_200_OK)
 def list_all_tours():
     return tours
 
 
-@router.get("/ch02/admin/tourists/list")
+@router.get("/admin/tourists/list")
 def list_all_tourists():
     return approved_users;
 
 
-@router.get("/ch02/admin/tourists/pending/list")
+@router.get("/admin/tourists/pending/list")
 def list_all_pending():
     return pending_users;
 
 
-@router.get("/ch02/admin/tourists/vip")
+@router.get("/admin/tourists/vip")
 def list_valuable_visitors():
     try:
         sort_orders = sorted(approved_users.items(), key=lambda x: x[1].booked, reverse=True)
@@ -86,7 +86,7 @@ def list_valuable_visitors():
             content={"message": "invalid operation"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@router.post("/ch02/admin/user/login/approve")
+@router.post("/admin/user/login/approve")
 def approve_login(userid: UUID):
     try:
         approved_users[userid] = pending_users[userid]
