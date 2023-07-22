@@ -38,7 +38,7 @@ class Tourist(BaseModel):
     tours: List[TourBasicInfo]
 
 
-@router.post("/ch02/user/signup/")
+@router.post("/user/signup/")
 def signup(signup: Signup):
     try:
         userid = uuid1()
@@ -51,7 +51,7 @@ def signup(signup: Signup):
         return JSONResponse(content={"message": "invalid operation"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@router.post("/ch02/user/login/")
+@router.post("/user/login/")
 def login(login: User, bg_task:BackgroundTasks):
     try:
         signup_json = jsonable_encoder(approved_users[login.id]) 
@@ -61,7 +61,7 @@ def login(login: User, bg_task:BackgroundTasks):
         return JSONResponse(content={"message": "invalid operation"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
 
-@router.get("/ch02/user/login/{username}/{password}")
+@router.get("/user/login/{username}/{password}")
 def login(username:str, password: str, bg_task:BackgroundTasks):
     tourist_list = [ tourist for tourist in approved_users.values() if tourist['login']['username'] == username and tourist['login']['password'] == password] 
     if len(tourist_list) == 0 or tourist_list == None:
