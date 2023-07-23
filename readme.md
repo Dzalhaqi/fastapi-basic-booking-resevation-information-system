@@ -1,6 +1,5 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/dzalhaqi/pa-mlops">
   <h3 align="center">
     FastAPI Project
   </h3>
